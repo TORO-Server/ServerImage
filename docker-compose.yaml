@@ -14,6 +14,8 @@ services:
       - LANGUAGE=ja_JP:ja
       - LC_ALL=ja_JP.UTF-8
     stop_grace_period: 1m
+    networks:
+      - minecraft-network
   cloudflared:
     image: cloudflare/cloudflared:latest
     container_name: cloudflared
@@ -21,3 +23,8 @@ services:
     env_file:
       - ./cloudflared.env
     command: tunnel run
+    networks:
+      - minecraft-network
+networks:
+  minecraft-network:
+    external: true
