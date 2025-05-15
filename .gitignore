@@ -1,3 +1,7 @@
+/mirroring
+/backups
+/main
+
 *.env
 
 *.gem
