@@ -4,7 +4,6 @@ services:
     container_name: toro-main
     restart: unless-stopped
     ports:
-      - "27249:25565"
       - "60016:8123"
     volumes:
       - "./main:/app"
